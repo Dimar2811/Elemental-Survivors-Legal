@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elemental Survivors – Datenschutz / Privacy</title><link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+<nav><a href="index.html">Elemental Survivors</a><a href="terms.html">Nutzungsbedingungen</a><a href="support.html">Support</a><a href="impressum.html">Impressum</a></nav>
+<div class="lang"><a href="#de">Deutsch</a><a href="#en">English</a></div>
+
+<!--
+  Belege im Code (Stand 2026-11-12):
+  - Spielstand nur lokal (localStorage im WKWebView): src/main.ts readCharacter/persistProfile.
+  - iCloud-Spielstand (NSUbiquitousKeyValueStore, nur Apple, kein eigener Server): Plugin CloudSave der iOS-Hülle.
+  - Rangliste nur nach Eingabe eines Namens: src/ui/rangliste.ts (join/report/leave), Server „Elemental Survivors Leaderboard“
+    src/server.ts (Tabellen players: id, name, token_hash, created_at; runs: Spielwerte). IP nur zur Drosselung im Speicher.
+  - Käufe: StoreKit 2 auf dem Gerät, kein eigener Server: ios/App/App/StorePlugin.swift.
+  - Keine Analyse-, Werbe- oder Crash-SDKs von Dritten.
+-->
+
+<section id="de">
+<h1>Datenschutzerklärung</h1>
+<p class="muted">Stand: 12. November 2026</p>
+
+<h2>Verantwortlicher</h2>
+<p>Marc Hammerschmidt<br>Karolingerstraße 9a<br>55283 Nierstein<br>Deutschland<br>E-Mail: <a href="mailto:support@3d-voxelia.com">support@3d-voxelia.com</a></p>
+
+<h2>Kurzfassung</h2>
+<p class="card">Elemental Survivors läuft ohne Konto, ohne Werbung und ohne Tracking. Dein Spielstand bleibt auf deinem Gerät und, wenn du iCloud nutzt, in deinem iCloud. Nur wer freiwillig an der Endlos-Rangliste teilnimmt, schickt einen selbst gewählten Namen und die Werte seiner Endlos-Runs an unseren Ranglisten-Server. Diesen Eintrag kannst du in der App jederzeit löschen.</p>
+
+<h2>Welche Daten die App verarbeitet</h2>
+<h3>Spielstand auf dem Gerät</h3>
+<p>Fortschritt, Ausrüstung, Einstellungen und das Aussehen deiner Figur speichert die App auf deinem Gerät. Wir erhalten diese Daten nicht. Sie bleiben, bis du sie in der App zurücksetzt oder die App löschst.</p>
+<h3>Spielstand in iCloud</h3>
+<p>Ist iCloud auf deinem Gerät angemeldet, legt die App eine Kopie des Spielstands in deinem iCloud-Speicher ab, damit er nach einem Gerätewechsel oder einer Neuinstallation zurückkommt. Den Speicher betreibt Apple; wir haben keinen Zugriff darauf. Du schaltest das in den iPhone-Einstellungen unter Apple-Account → iCloud aus.</p>
+<h3>Endlos-Rangliste (freiwillig)</h3>
+<p>Erst wenn du in der Rangliste einen Namen einträgst, sendet die App Daten an unseren Server unter elemental.3d-voxelia.com: den gewählten Namen (3 bis 20 Zeichen, gern ein Fantasiename) und zu jedem Endlos-Run Stufe, gewählte Elemente und Pfad, überlebte Zeit, Schaden, höchsten Schaden pro Sekunde, besiegte Gegner und Wächter, erreichte Stufe, Plattform (iOS oder Web) und Spielversion. Der Server speichert dazu eine zufällige Spieler-ID, einen Prüfwert deines Zugangsschlüssels und den Zeitpunkt. Andere sehen deinen Namen und deine Werte in der Rangliste. Zweck: die Rangliste anzeigen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (die von dir gewünschte Teilnahme). Speicherdauer: bis du den Eintrag löschst; dann entfernt der Server Namen und alle Runs sofort.</p>
+<h3>Verbindungsdaten</h3>
+<p>Bei jeder Anfrage an den Ranglisten-Server verarbeitet dieser technisch bedingt deine IP-Adresse, um die Antwort zurückzuschicken und Missbrauch zu begrenzen (Anfragen pro Minute). Der Dienst selbst speichert die IP-Adresse nicht in seiner Datenbank. Der vorgeschaltete Webserver kann Zugriffe mit IP-Adresse, Zeitpunkt und Anfrage protokollieren; diese Protokolle dienen nur der Sicherheit und Fehlersuche und werden nicht mit deinem Namen verknüpft. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (sicherer Betrieb).</p>
+
+<h2>Käufe</h2>
+<p>Die Vollversion und die Ausprägungen sind Einmalkäufe, die Apple über den App Store abwickelt. Wir erhalten keine Zahlungsdaten und betreiben dafür keinen eigenen Server: Die App fragt nur auf deinem Gerät bei Apple ab, welche Käufe zu deiner Apple-ID gehören. Für die Verarbeitung durch Apple gilt Apples Datenschutzrichtlinie.</p>
+
+<h2>Empfänger und Übermittlung in Drittländer</h2>
+<p>Der Ranglisten-Server läuft bei der IONOS SE in Deutschland, die die Daten in unserem Auftrag verarbeitet. Apple verarbeitet Käufe und iCloud-Daten in eigener Verantwortung; dabei können Daten in die USA übermittelt werden, abgesichert durch Apples Teilnahme am EU-U.S. Data Privacy Framework und Standardvertragsklauseln. Weitere Empfänger gibt es nicht.</p>
+
+<h2>Tracking und Werbung</h2>
+<p>Die App zeigt keine Werbung, nutzt keine Analyse- oder Tracking-Dienste und verfolgt dich nicht über Apps und Websites hinweg.</p>
+
+<h2>Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Du kannst dich ausserdem bei einer Datenschutz-Aufsichtsbehörde beschweren, etwa beim Landesbeauftragten für den Datenschutz Rheinland-Pfalz. Deinen Ranglisten-Eintrag löschst du in der App unter Rangliste → „Eintrag löschen“.</p>
+
+<h2>Kinder</h2>
+<p>Die App richtet sich nicht gezielt an Kinder unter 13 Jahren. Die Rangliste ist freiwillig; bitte trag dort keinen echten Namen ein.</p>
+
+<h2>Änderungen</h2>
+<p>Wir passen diese Erklärung an, wenn sich die App ändert. Es gilt die hier veröffentlichte Fassung.</p>
+</section>
+
+<section id="en">
+<h1>Privacy Policy</h1>
+<p class="muted">Last updated: 12 November 2026</p>
+
+<h2>Controller</h2>
+<p>Marc Hammerschmidt<br>Karolingerstraße 9a<br>55283 Nierstein<br>Germany<br>Email: <a href="mailto:support@3d-voxelia.com">support@3d-voxelia.com</a></p>
+
+<h2>Summary</h2>
+<p class="card">Elemental Survivors works without an account, without ads and without tracking. Your progress stays on your device and, if you use iCloud, in your iCloud. Only if you choose to join the Endless leaderboard does the app send a name you pick and the stats of your Endless runs to our leaderboard server. You can delete that entry in the app at any time.</p>
+
+<h2>Data the app processes</h2>
+<h3>Progress on your device</h3>
+<p>Progress, gear, settings and your character's look are stored on your device. We do not receive them. They stay until you reset them in the app or delete the app.</p>
+<h3>Progress in iCloud</h3>
+<p>If your device is signed in to iCloud, the app keeps a copy of your progress in your iCloud storage so it comes back after switching devices or reinstalling. Apple runs this storage; we have no access to it. Turn it off in iPhone Settings → Apple Account → iCloud.</p>
+<h3>Endless leaderboard (optional)</h3>
+<p>Only once you enter a name in the leaderboard does the app send data to our server at elemental.3d-voxelia.com: the name you chose (3 to 20 characters; a made-up name is welcome) and, for each Endless run, the difficulty, chosen elements and path, time survived, damage, peak damage per second, enemies and guardians defeated, level reached, platform (iOS or web) and game version. The server also stores a random player ID, a hash of your access key and a timestamp. Others see your name and stats on the leaderboard. Purpose: showing the leaderboard. Legal basis: Art. 6(1)(b) GDPR (the participation you asked for). Retention: until you delete the entry; the server then removes your name and all runs at once.</p>
+<h3>Connection data</h3>
+<p>For every request, the leaderboard server processes your IP address to send the answer back and to limit abuse (requests per minute). The service itself does not store IP addresses in its database. The web server in front of it may log requests with IP address, time and path; these logs serve security and troubleshooting only and are never linked to your name. Legal basis: Art. 6(1)(f) GDPR (secure operation).</p>
+
+<h2>Purchases</h2>
+<p>The full version and the aspects are one-time purchases handled by Apple through the App Store. We receive no payment details and run no server for this: the app only asks Apple, on your device, which purchases belong to your Apple ID. Apple's privacy policy applies to Apple's processing.</p>
+
+<h2>Recipients and international transfers</h2>
+<p>The leaderboard server is hosted by IONOS SE in Germany, which processes the data on our behalf. Apple processes purchases and iCloud data under its own responsibility; data may be transferred to the USA, safeguarded by Apple's participation in the EU-U.S. Data Privacy Framework and standard contractual clauses. There are no other recipients.</p>
+
+<h2>Tracking and advertising</h2>
+<p>The app shows no ads, uses no analytics or tracking services and does not track you across apps and websites.</p>
+
+<h2>Your rights</h2>
+<p>You have the right to access, rectify, erase, restrict and port your data, to object to processing, and to withdraw consent at any time. You may also lodge a complaint with a data protection supervisory authority. Delete your leaderboard entry in the app under Leaderboard → “Eintrag löschen”.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children under 13. The leaderboard is optional; please do not enter your real name there.</p>
+
+<h2>Changes</h2>
+<p>We update this policy when the app changes. The version published here applies.</p>
+</section>
+</main></body>
+</html>
